@@ -15,4 +15,22 @@ public class Student {
         this.name = "初始";
         this.age = 1;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Student setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Student setAge(int age) {
+        this.age = age;
+        return this;
+    }
 }

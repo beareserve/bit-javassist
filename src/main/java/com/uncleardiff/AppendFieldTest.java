@@ -51,9 +51,15 @@ public class AppendFieldTest {
                 field.set(newObject,newFieldMap.get(fieldName));
             }
 
+            /**
+             * k1:新类添加了属性，但没有get/set方法，所以fastjson打印不出来
+             * 原对象: {"id":1,"phone":"111","student":{"age":1,"name":"初始"}}
+             * 添加属性：{"phoneEncrypt":"111加密"}
+             * 终对象：{"id":1,"phone":"111","student":{"age":1,"name":"初始"}}
+             */
             System.out.println("原对象: " + JSONObject.toJSONString(util));
             System.out.println("添加属性：" + JSON.toJSONString(newFieldMap));
-            System.out.println("终对象" + JSON.toJSONString(newObject));
+            System.out.println("终对象：" + JSON.toJSONString(newObject));
         } catch (NotFoundException | CannotCompileException | ClassNotFoundException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {

@@ -46,4 +46,13 @@ public class StringUtil {
         this.phone = phone;
         return this;
     }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public StringUtil setStudent(Student student) {
+        this.student = student;
+        return this;
+    }
 }
